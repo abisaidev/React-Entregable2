@@ -22,24 +22,24 @@ import n_mist from '../images/n_mist.png'
 const Weather = () => {
 
     const bgs = [
-        {id: 'clear sky', bg: d_clear_sky, time: 'd'},
-        {id: 'few clouds', bg: d_few_clouds, time: 'd'},
-        {id: 'scattered clouds', bg: d_scattered_clouds, time: 'd'},
-        {id: 'broken clouds', bg: d_broken_clouds, time: 'd'},
-        {id: 'shower rain', bg: d_shower_rain, time: 'd'},
-        {id: 'rain', bg: d_rain, time: 'd'},
-        {id: 'thunderstorm', bg: d_thunderstorm, time: 'd'},
-        {id: 'snow', bg: d_snow, time: 'd'},
-        {id: 'mist', bg: d_mist, time: 'd'},
-        {id: 'clear sky', bg: n_clear_sky, time: 'n'},
-        {id: 'few clouds', bg: n_few_clouds, time: 'n'},
-        {id: 'scattered clouds', bg: n_scattered_clouds, time: 'n'},
-        {id: 'broken clouds', bg: n_broken_clouds, time: 'n'},
-        {id: 'shower rain', bg: n_shower_rain, time: 'n'},
-        {id: 'rain', bg: n_rain, time: 'n'},
-        {id: 'thunderstorm', bg: n_thunderstorm, time: 'n'},
-        {id: 'snow', bg: n_snow, time: 'n'},
-        {id: 'mist', bg: n_mist, time: 'n'}
+        {id: '01d', bg: d_clear_sky, time: 'd'},
+        {id: '02d', bg: d_few_clouds, time: 'd'},
+        {id: '03d', bg: d_scattered_clouds, time: 'd'},
+        {id: '04d', bg: d_broken_clouds, time: 'd'},
+        {id: '09d', bg: d_shower_rain, time: 'd'},
+        {id: '10d', bg: d_rain, time: 'd'},
+        {id: '11d', bg: d_thunderstorm, time: 'd'},
+        {id: '13d', bg: d_snow, time: 'd'},
+        {id: '50d', bg: d_mist, time: 'd'},
+        {id: '01n', bg: n_clear_sky, time: 'n'},
+        {id: '02n', bg: n_few_clouds, time: 'n'},
+        {id: '03n', bg: n_scattered_clouds, time: 'n'},
+        {id: '04n', bg: n_broken_clouds, time: 'n'},
+        {id: '09n', bg: n_shower_rain, time: 'n'},
+        {id: '10n', bg: n_rain, time: 'n'},
+        {id: '11n', bg: n_thunderstorm, time: 'n'},
+        {id: '13n', bg: n_snow, time: 'n'},
+        {id: '50n', bg: n_mist, time: 'n'}
     ];
     const bgsContainer = [
         {color: '#e89362', time: 'd'},
@@ -63,7 +63,7 @@ const Weather = () => {
     }, [])
 
     for( let i in bgs ){
-        if( weather.weather?.[0].description === bgs[i].id && waIcon[2] === bgs[i].time){
+        if( waIcon === bgs[i].id ){
             document.querySelector('.App').style = `background-image: url(${bgs[i].bg})`
             for(let it in bgsContainer){
                 if(waIcon[2] === bgsContainer[it].time){
