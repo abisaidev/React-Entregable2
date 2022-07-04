@@ -94,7 +94,8 @@ const Weather = () => {
                 <p style={{fontSize: '4rem'}}><b>{degrees ? `${celsius} °C` : `${fahrenheit} °F`}</b></p>
             </div>
             <div className="btn-container">
-                <button onClick={degreesToggle}>{degrees ? 'Fahrenheit' : 'Celsius'}</button>
+                <p>Current temperature unit: {degrees ? 'Celsius' : 'Fahrenheit'}</p>
+                <button onClick={degreesToggle}>Change to {degrees ? 'Fahrenheit' : 'Celsius'}!</button>
             </div>
         </div>
     );
